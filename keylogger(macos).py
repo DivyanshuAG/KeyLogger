@@ -67,7 +67,7 @@ def computerinfo():
 
         f1.write("Processor: " + platform.processor() + '\n')
         f1.write("System: " + platform.system() + " " + platform.version() + '\n')
-        f1.write("Machine: " + platform.machine() + 'n')
+        f1.write("Machine: " + platform.machine() + '\n')
         f1.write("Hostname: " + hostname + '\n')
         f1.write("Private IP Address: " + IPAddress + '\n')
 
