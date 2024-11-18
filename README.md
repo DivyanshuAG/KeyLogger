@@ -12,6 +12,7 @@ The **macOS Keylogger** is designed to capture and log keystrokes on macOS syste
 - **Takes Screenshots**: A screenshot is captured to visually log the user's screen at the time of execution.
 - **Logs Execution Time**: The exact timestamp when the keylogger was running is recorded.
 - **Notes the IP address and system information**: The system information is noted and the public ip is also being noted when the keylogger is executed.
+- 
 **Current Limitations**:
 - **Root Permissions**: The keylogger requires root (administrator) permissions to monitor keyboard activity on macOS. This permission request may raise security concerns for the user.
 - **Ongoing Improvements**: Efforts are underway to streamline the keylogger's behavior to minimize the need for elevated privileges.
