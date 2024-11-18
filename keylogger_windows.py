@@ -96,7 +96,7 @@ def run() :
         keys = []
 
         def on_press(key):
-            global keys, count, currentTime
+            nonlocal keys, count, currentTime
 
             print(key)
             keys.append(key)
