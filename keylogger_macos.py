@@ -19,7 +19,6 @@ def run() :
 
     def on_press(key):
         nonlocal keys, count
-        print(key)
         count = count + 1
         keys.append(key)
         if count >= 1:
